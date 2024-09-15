@@ -12,7 +12,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-export async function loader() {
-  const fetchData = await fetch(`http://www.omdbapi.com/?apikey=[yourkey]&`);
-}

@@ -1,10 +1,14 @@
+import { useSelector } from "react-redux";
 import MovieItem from "./MovieItem";
 import style from "./MoviesList.module.css";
 export default function MoviesList() {
+  // status, error
+
+  const { movies } = useSelector((store) => store.movies);
   return (
     <div className={style.moviesList}>
-      {new Array(5).fill(null).map(function (el, i) {
-        return <MovieItem key={i} />;
+      {movies?.map(function (movie, i) {
+        return <MovieItem movie={movie} key={i} />;
       })}
     </div>
   );

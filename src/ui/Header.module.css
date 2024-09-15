@@ -12,13 +12,17 @@
 
 spacing  system 2/4/8/12/16/24/32/48/64/80/96/128 */
 .header input {
+  justify-self: center;
   width: 30%;
   border: 4px #12b886;
   padding: 10px;
   border-radius: 50px;
   box-shadow: 0px 0px 15px rgba(#f03e3e, 0.8);
   background-color: #f03e3e;
+  color: white;
+  font-weight: 500;
 }
+
 .header input::placeholder {
   color: white;
   font-weight: 500;

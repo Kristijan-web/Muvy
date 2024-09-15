@@ -1,5 +1,5 @@
 .moviesList {
-  background-color: orange;
+  background-color: #343a40;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,4 +7,6 @@
   gap: 48px;
   padding-top: 32px;
   padding-bottom: 32px;
+  overflow: scroll;
+  overflow-x: hidden;
 }

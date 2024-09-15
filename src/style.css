@@ -13,3 +13,19 @@ body {
   color: white;
   background-color: #212529;
 }
+/* Stilizovanje scroll bara za webkit preglednike */
+::-webkit-scrollbar {
+  width: 12px; /* Širina scroll bara */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Boja pozadine scroll bara */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f03e3e; /* Boja thumb-a (deo scroll bara koji se pomera) */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Boja thumb-a kada je pretrčana mišem */
+}
