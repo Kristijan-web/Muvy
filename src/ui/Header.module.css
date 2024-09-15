@@ -1,0 +1,29 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-top: 25px;
+  padding: 0% 10%;
+  margin-bottom: 64px;
+  height: 65px;
+}
+/* font-size 10/12/14/16/18/20/24/30/36/44/52/62/74/86/98
+
+spacing  system 2/4/8/12/16/24/32/48/64/80/96/128 */
+.header input {
+  width: 30%;
+  border: 4px #12b886;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px rgba(#f03e3e, 0.8);
+  background-color: #f03e3e;
+}
+.header input::placeholder {
+  color: white;
+  font-weight: 500;
+  padding-left: 12px;
+}
+.logo {
+  width: 120px;
+}

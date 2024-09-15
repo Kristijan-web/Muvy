@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* font-size 10/12/14/16/18/20/24/30/36/44/52/62/74/86/98
+
+spacing  system 2/4/8/12/16/24/32/48/64/80/96/128 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sanf-serif;
+  color: white;
+  background-color: #212529;
+}
