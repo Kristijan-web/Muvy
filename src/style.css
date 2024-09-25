@@ -13,6 +13,9 @@ body {
   color: white;
   background-color: #212529;
 }
+html {
+  font-size: 62.5%;
+}
 /* Stilizovanje scroll bara za webkit preglednike */
 ::-webkit-scrollbar {
   width: 12px; /* Širina scroll bara */

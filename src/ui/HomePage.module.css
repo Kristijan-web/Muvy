@@ -4,4 +4,5 @@
   column-gap: 60px;
   justify-items: center;
   height: calc(100vh - (90px + 64px));
+  overflow: hidden;
 }

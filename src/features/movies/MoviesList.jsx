@@ -4,12 +4,17 @@ import style from "./MoviesList.module.css";
 export default function MoviesList() {
   // status, error
 
-  const { movies } = useSelector((store) => store.movies);
+  const { movies, status } = useSelector((store) => store.movies);
+
   return (
     <div className={style.moviesList}>
-      {movies?.map(function (movie, i) {
-        return <MovieItem movie={movie} key={i} />;
-      })}
+      {status === "loading" ? (
+        <span className={style.loader}></span>
+      ) : (
+        movies?.map(function (movie, i) {
+          return <MovieItem movie={movie} key={i} />;
+        })
+      )}
     </div>
   );
 }

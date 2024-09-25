@@ -1,8 +1,7 @@
 .movieItem {
   display: flex;
   align-items: center;
-  height: 70px;
-  gap: 24px;
+  gap: 2.4rem;
   width: 100%;
   padding: 0% 12%;
   cursor: pointer;
@@ -12,7 +11,7 @@
   object-fit: contain;
 }
 .movieItemLeft {
-  width: 80px;
+  width: 20rem;
   height: 100%;
 }
 .movieItemRight {
@@ -22,5 +21,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
+}
+.movieItemRight p:first-child {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.movieItemRight p:last-child {
+  font-size: 1.4rem;
 }
