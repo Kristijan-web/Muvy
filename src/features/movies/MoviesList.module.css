@@ -9,6 +9,7 @@
   padding-bottom: 3.2rem;
   overflow: scroll;
   overflow-x: hidden;
+  border-radius: 4px;
 }
 .loader {
   margin-top: 4.2rem;

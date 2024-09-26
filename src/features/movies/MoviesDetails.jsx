@@ -17,13 +17,22 @@ export default function MoviesDetails() {
             <div className={style.container}>
               <h2 className={style.title}>
                 {selectedMovie.Title} rating:
-                <span>{selectedMovie.Metascore}</span>
+                <span> {selectedMovie.Metascore}</span>
               </h2>
-              <span className={style.released}>{selectedMovie.Released}</span>
-              <span className={style.movieLength}>{selectedMovie.Runtime}</span>
+              <div className={style.movieInfoContainer}>
+                <span className={style.released}>{selectedMovie.Released}</span>
+                <span className={style.movieLength}>
+                  {selectedMovie.Runtime}
+                </span>
+              </div>
+
               <p className={style.genre}>{selectedMovie.Genre}</p>
 
               <p className={style.description}>{selectedMovie.Plot}</p>
+              <p className={style.actors}>Actors: {selectedMovie.Actors}</p>
+              <p className={style.directedBy}>
+                Directed by: {selectedMovie.Director}
+              </p>
             </div>
           </div>
         </>
