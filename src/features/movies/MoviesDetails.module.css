@@ -3,6 +3,8 @@
 spacing  system 2/4/8/12/16/24/32/48/64/80/96/128 */
 .movieDetails {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 4.8rem;
   background-color: #f03e3e;
   width: 100%;
@@ -58,4 +60,25 @@ spacing  system 2/4/8/12/16/24/32/48/64/80/96/128 */
 }
 .directedBy {
   font-size: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+.loader {
+  margin-top: 4.2rem;
+  width: 9.8rem;
+  height: 9.8rem;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

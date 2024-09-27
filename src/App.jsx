@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import HomePage from "./ui/HomePage";
 import Error from "./ui/Error";
-import TestPage from "./ui/TestPage";
+import StarContainer from "./ui/StarContainer";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -16,7 +16,7 @@ export default function App() {
         },
         {
           path: "/test",
-          element: <TestPage />,
+          element: <StarContainer />,
         },
       ],
     },
