@@ -1,6 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
-import HomePage from "./ui/HomePage";
+import HomePage, {
+  loader as loaderHome,
+  action as actionHome,
+} from "./ui/HomePage";
 import Error from "./ui/Error";
 import StarContainer from "./ui/StarContainer";
 
@@ -13,6 +16,8 @@ export default function App() {
         {
           path: "/",
           element: <HomePage />,
+          loader: loaderHome,
+          action: actionHome,
         },
         {
           path: "/test",

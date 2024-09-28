@@ -1,11 +1,17 @@
 import style from "./StarContainer.module.css";
 import { useState } from "react";
 import Star from "./Star";
+import { useSelector } from "react-redux";
+import { useFetcher } from "react-router-dom";
 export default function StarContainer() {
   const [rating, setRating] = useState("");
   const [chosenRating, setChosenRating] = useState("");
+  const { selectedMovie } = useSelector((store) => store.movies);
+
+  const fetcher = useFetcher();
   // hocu da hover ima prednost u odnosu na klik, da ako postji click i izadje se iz containera da se prikaze izabrani broj zvezdica
-  console.log(chosenRating);
+
+  function handleSelectedMovie() {}
   function handleChosenRating(rating) {
     setChosenRating(rating);
   }
@@ -29,7 +35,18 @@ export default function StarContainer() {
           />
         );
       })}
-      {chosenRating && <button className={style.button}>Confirm</button>}
+      {chosenRating && (
+        <fetcher.Form method="POST">
+          <input
+            type="hidden"
+            value={JSON.stringify(selectedMovie)}
+            name="selectedMovie"
+          />
+          <button type="submit" className={style.button}>
+            Confirm
+          </button>
+        </fetcher.Form>
+      )}
     </div>
   );
 }

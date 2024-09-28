@@ -43,8 +43,6 @@ const moviesSlice = createSlice({
 export const fetchMovies = createAsyncThunk(
   "movies/setMovies",
   async function (payload) {
-    console.log("Upao u action creator function");
-    console.log(payload);
     // API KEY: df26f201
     //usage: http://www.omdbapi.com/?i=tt3896198&apikey=df26f201
     try {
@@ -66,7 +64,6 @@ export const fetchMovieData = createAsyncThunk(
       `http://www.omdbapi.com/?i=${payload}&apikey=df26f201`
     );
     const data = await fetchData.json();
-    console.log(data);
     return data;
   }
 );
