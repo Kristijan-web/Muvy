@@ -1,0 +1,9 @@
+.itemContainer {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  width: 100%;
+}
+.itemContainer div:first-child img {
+  width: 100%;
+}

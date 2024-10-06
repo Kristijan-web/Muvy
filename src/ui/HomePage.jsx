@@ -23,7 +23,6 @@ export async function loader() {
 export async function action({ request }) {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  console.log(data);
   const { selectedMovie } = data;
   const objectMovie = JSON.parse(selectedMovie);
   //proveri da li u localStorage postoji key "movies"

@@ -6,4 +6,7 @@ spacing  system 2/4/8/12/16/24/32/48/64/80/96/128 */
   width: 100%;
   border-radius: 4px;
   padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
