@@ -27,12 +27,9 @@ function MovieRatingsItem({ movie }) {
           name="star"
         ></ion-icon>
       </div>
-      <fetcher.Form
-        className={style.closeContainer}
-        onClick={handleDeleteMovie}
-      >
+      <fetcher.Form method="POST" className={style.closeContainer}>
         <input type="hidden" value={JSON.stringify(movie.imdbID)} name="id" />
-        <p type="submit">&times;</p>
+        <button type="submit">&times;</button>
       </fetcher.Form>
     </div>
   );

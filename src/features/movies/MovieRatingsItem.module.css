@@ -44,11 +44,16 @@
   height: 2rem;
   padding: 0.5rem;
   border-radius: 100px;
-  color: #f4f4f4;
   font-size: 1.6rem;
   background-color: #262626;
   cursor: pointer;
 }
 .closeContainer:hover {
   background-color: red;
+}
+.closeContainer button {
+  background-color: transparent;
+  border: none;
+  color: #f4f4f4;
+  cursor: pointer;
 }
