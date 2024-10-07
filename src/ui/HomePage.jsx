@@ -24,7 +24,7 @@ export async function action({ request }) {
   console.log("eee upao u action");
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  const { selectedMovie, selectedRating } = data;
+  const { selectedMovie, selectedRating, id } = data;
   let objectMovie = JSON.parse(selectedMovie);
   const objectSelectedRating = JSON.parse(selectedRating);
   objectMovie.selectedRating = objectSelectedRating;
