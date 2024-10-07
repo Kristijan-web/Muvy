@@ -5,6 +5,9 @@ export default function MoviesDetails() {
   const { selectedMovie, statusMovie } = useSelector((store) => store.movies);
   return (
     <div className={style.movieDetails}>
+      {statusMovie !== "loading" && !selectedMovie && (
+        <p className={style.introduction}>Start by searching for a movie 😄</p>
+      )}
       {statusMovie === "loading" ? (
         <span className={style.loader}></span>
       ) : (
