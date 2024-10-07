@@ -11,7 +11,6 @@ export default function StarContainer() {
   const fetcher = useFetcher();
   // hocu da hover ima prednost u odnosu na klik, da ako postji click i izadje se iz containera da se prikaze izabrani broj zvezdica
 
-  function handleSelectedMovie() {}
   function handleChosenRating(rating) {
     setChosenRating(rating);
   }
@@ -39,8 +38,14 @@ export default function StarContainer() {
         <fetcher.Form method="POST">
           <input
             type="hidden"
+            // samo prosledi kao hideen value izabrani to jest chosenRating
             value={JSON.stringify(selectedMovie)}
             name="selectedMovie"
+          />
+          <input
+            type="hidden"
+            value={JSON.stringify(chosenRating)}
+            name="selectedRating"
           />
           <button type="submit" className={style.button}>
             Confirm

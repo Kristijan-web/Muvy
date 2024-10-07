@@ -32,10 +32,25 @@ function MovieRatingsItem({ movie }) {
       </div>
       <div>
         <p>{movie.Title}</p>
-        <p>{movie.Released}</p>
+        <p>{movie.Year}</p>
       </div>
       <div>
-        <p>rating here</p>
+        <p>{movie.selectedRating}</p>
+
+        <ion-icon
+          style={{
+            color: "yellow",
+            fill: "yellow",
+            stroke: "yellow",
+            width: "3.2rem",
+            height: "3.2rem",
+            display: "inline-block",
+          }}
+          name="star"
+        ></ion-icon>
+      </div>
+      <div className={style.closeContainer}>
+        <p>&times;</p>
       </div>
     </div>
   );

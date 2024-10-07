@@ -3,7 +3,52 @@
   align-items: center;
   gap: 2.4rem;
   width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgb(217, 217, 217);
+  padding-bottom: 1.2rem;
 }
+
 .itemContainer div:first-child img {
   width: 100%;
+}
+.itemContainer div:nth-child(2) p {
+  font-size: 1.6rem;
+}
+.itemContainer div:nth-child(2) p:first-child {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.itemContainer div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.itemContainer div:nth-child(3) p {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.starIcon {
+  color: yellow;
+  stroke: yellow;
+  fill: yellow;
+}
+.closeContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -7%;
+  right: -6%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 100px;
+  color: #f4f4f4;
+  font-size: 1.6rem;
+  background-color: #262626;
+  cursor: pointer;
+}
+.closeContainer:hover {
+  background-color: red;
 }

@@ -21,10 +21,14 @@ export async function loader() {
   return null;
 }
 export async function action({ request }) {
+  console.log("eee upao u action");
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  const { selectedMovie } = data;
-  const objectMovie = JSON.parse(selectedMovie);
+  const { selectedMovie, selectedRating } = data;
+  let objectMovie = JSON.parse(selectedMovie);
+  const objectSelectedRating = JSON.parse(selectedRating);
+  objectMovie.selectedRating = objectSelectedRating;
+
   //proveri da li u localStorage postoji key "movies"
   if (localStorage?.getItem("movies")) {
     const getLocalMovies = localStorage.getItem("movies");
@@ -35,6 +39,12 @@ export async function action({ request }) {
         return el.imdbID === objectMovie.imdbID;
       })
     ) {
+      // u ovaj if se upada ako postoji vec film u localStorage-u, ali ako postoji samo dodaj novi selectedRating
+      let newMovies = localMovies.filter(function (movie) {
+        return movie.imdbID != objectMovie.imdbID;
+      });
+      newMovies.push(objectMovie);
+      localStorage.setItem("movies", JSON.stringify(newMovies));
       return null;
     }
     localStorage.setItem(
