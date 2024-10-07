@@ -29,5 +29,7 @@ spacing  system 2/4/8/12/16/24/32/48/64/80/96/128 */
   padding-left: 1.2rem;
 }
 .logo {
-  width: 12rem;
+  width: 6.8rem;
+  height: 6.8rem;
+  border-radius: 9px;
 }

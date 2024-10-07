@@ -12,7 +12,11 @@ export default function Header() {
 
   return (
     <header className={style.header}>
-      <p>Logo</p>
+      <img
+        className={style.logo}
+        src="/public/images/logo-no-background.png"
+        alt="movie-icon"
+      />
       <input
         value={search}
         onChange={handleSearch}

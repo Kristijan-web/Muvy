@@ -8,11 +8,29 @@ export default function MoviesRatings() {
   // Ideja:
   // mozda da radim sa loaderom, i da koristim fecher.Form, kada se klikne na submit dugme, ponovo se trigeruje loader koji ce dohvatiti filmove iz localStorage
   const movies = useLoaderData();
-  if (movies) {
-    console.log(Object.entries(movies));
-  }
+
+  // racune avg ratinga
+
+  const avg = movies.reduce(function (acc, value) {
+    return acc + value.selectedRating;
+  }, 0);
+
   return (
     <div className={style.moviesRatings}>
+      <div className={style.badge}>
+        <div>
+          <ion-icon name="videocam-outline"></ion-icon>
+
+          <span>{movies.length === 0 ? 0 : movies.length} </span>
+        </div>
+        <div>
+          <ion-icon name="star-half-outline"></ion-icon>
+          <span>{(avg / movies.length).toFixed(1)}</span>
+        </div>
+      </div>
+      {(!movies || movies?.length === 0) && (
+        <p className={style.movieIntro}>Movies you rated are displayed here</p>
+      )}
       {movies?.map(function (el, i) {
         return <MovieRatingsItem movie={el} key={i} />;
       })}
